@@ -96,7 +96,7 @@
   (caddr (or project (redmine-current-project))))
 
 (defun redmine-action-uri (action &optional project type)
-  (format "%s%s?format=%s&key=%s"
+  (format "%s%s?format=%s&key=%s&sort=updated_on%%3Adesc&watcher_id=me&set_filter=1"
           (redmine-project-uri project)
           action
           (or type "atom")
